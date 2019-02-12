@@ -1,7 +1,14 @@
-﻿@{
+﻿@model  int
+
+
+@{
     ViewBag.Title = "About";
 }
+<h1>Hakkında</h1>
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h3>ViewBag'dan gelen mesaj değeri=@ViewBag.Message</h3>
+<b>ViewData'dan gelen mesaj değeri=@ViewData["Message"]</b>
+<b>TempData'dan gelen mesaj değeri=@TempData["Message"]</b>
+<p>Modelden gelen değişken=@Model</p>
 
 <p>Use this area to provide additional information.</p>

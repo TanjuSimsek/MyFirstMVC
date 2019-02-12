@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "TahminEt";
+  
+}
+
+@if (ViewBag.IsSuccess != null && ViewBag.IsSuccess == false)
+{
+
+    <div class="alert alert-danger">@ViewBag.Message</div>
+
+
+}
+else if (ViewBag.IsSuccess != null && ViewBag.IsSuccess == true)
+{    
+    <div class="alert alert-success">@ViewBag.Message</div>
+    <a class="btn btn-primary"href="@Url.Action("Replay")">Yeniden Oyna</a>
+
+}
+@if (ViewBag.IsSuccess == null || ViewBag.IsSuccess == false)
+{   
+    <h2>Bir Sayı Tutum,tahmine et?</h2>
+    <form>
+        
+            <input type="number" name="tahmin" class="form-control" required />
+             <input type="submit" value="Gönder" class="btn btn-primary" />
+
+
+    </form>
+
+}
+
+
+
